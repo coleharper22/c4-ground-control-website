@@ -1,0 +1,3 @@
+# Generated output — rebuild with `python3 src/build.py`
+build/
+.DS_Store

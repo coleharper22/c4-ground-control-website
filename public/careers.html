@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Join the C4 Ground Control team! Landscaping jobs in Orlando FL. Competitive pay, benefits, and growth opportunities. Now hiring experienced landscapers, irrigation techs, and crew leaders.">
+    <meta name="keywords" content="landscaping jobs Orlando, irrigation technician jobs Orlando, landscape crew jobs, landscaping careers Orlando FL, lawn care jobs Orlando">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://c4groundcontrol.com/careers.html">
+    
+    <title>Careers - Join Our Team | C4 Ground Control Orlando</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary-blue: #0D5CB8;
+            --primary-green: #006B3F;
+            --dark-bg: #1a1a1a;
+            --darker-bg: #0d0d0d;
+            --text-light: #ffffff;
+            --text-gray: #a0a0a0;
+            --transition-smooth: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #f8f9fa;
+        }
+
+        /* Header */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            background: rgba(26, 26, 26, 0.98);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 1.2rem 0;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo img {
+            height: 50px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+            align-items: center;
+        }
+
+        .nav-links a {
+            color: var(--text-light);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary-green);
+        }
+
+        .cta-button {
+            background: var(--primary-blue);
+            color: white !important;
+            padding: 0.7rem 1.5rem;
+            border-radius: 8px;
+            transition: var(--transition-smooth);
+        }
+
+        .cta-button:hover {
+            background: var(--primary-green);
+            transform: translateY(-2px);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, var(--primary-blue), var(--primary-green));
+            color: white;
+            padding: 150px 0 80px;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            font-weight: 800;
+            margin-bottom: 1rem;
+        }
+
+        .hero p {
+            font-size: 1.3rem;
+            max-width: 700px;
+            margin: 0 auto 2rem;
+            opacity: 0.95;
+        }
+
+        /* Why Join Section */
+        .why-join {
+            padding: 80px 0;
+            background: white;
+        }
+
+        .why-join h2 {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+            color: var(--primary-blue);
+        }
+
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .benefit-card {
+            background: #f8f9fa;
+            padding: 2rem;
+            border-radius: 12px;
+            text-align: center;
+            transition: transform 0.3s;
+        }
+
+        .benefit-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+
+        .benefit-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .benefit-card h3 {
+            color: var(--primary-blue);
+            margin-bottom: 0.5rem;
+        }
+
+        /* Open Positions */
+        .positions {
+            padding: 80px 0;
+            background: #f8f9fa;
+        }
+
+        .positions h2 {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+            color: var(--primary-blue);
+        }
+
+        .job-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 12px;
+            margin-bottom: 2rem;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            transition: var(--transition-smooth);
+        }
+
+        .job-card:hover {
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+
+        .job-card h3 {
+            color: var(--primary-blue);
+            font-size: 1.8rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .job-meta {
+            display: flex;
+            gap: 2rem;
+            margin: 1rem 0;
+            color: var(--text-gray);
+            font-size: 0.9rem;
+        }
+
+        .job-meta span {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .job-description {
+            margin: 1.5rem 0;
+            line-height: 1.8;
+        }
+
+        .job-description ul {
+            margin-left: 1.5rem;
+            margin-top: 1rem;
+        }
+
+        .job-description li {
+            margin-bottom: 0.5rem;
+        }
+
+        .apply-btn {
+            background: var(--primary-green);
+            color: white;
+            padding: 0.8rem 2rem;
+            border: none;
+            border-radius: 8px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: var(--transition-smooth);
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .apply-btn:hover {
+            background: var(--primary-blue);
+            transform: translateY(-2px);
+        }
+
+        /* Footer */
+        footer {
+            background: var(--darker-bg);
+            color: var(--text-light);
+            padding: 3rem 0 1.5rem;
+            text-align: center;
+        }
+
+        footer a {
+            color: var(--primary-green);
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            color: var(--primary-blue);
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .nav-links {
+                display: none;
+            }
+
+            .benefits-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .job-meta {
+                flex-direction: column;
+                gap: 0.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav>
+                <a href="index.html" class="logo">
+                    <img src="logo-full.jpg" alt="C4 Ground Control">
+                </a>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="careers.html">Careers</a></li>
+                    <li><a href="index.html#contact" class="cta-button">Contact Us</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <h1>Join Our Growing Team</h1>
+            <p>Build a rewarding career with Orlando's premier landscaping company. We're looking for passionate, hardworking individuals who take pride in transforming outdoor spaces.</p>
+        </div>
+    </section>
+
+    <section class="why-join">
+        <div class="container">
+            <h2>Why Work With C4 Ground Control?</h2>
+            <div class="benefits-grid">
+                <div class="benefit-card">
+                    <div class="benefit-icon">💰</div>
+                    <h3>Competitive Pay</h3>
+                    <p>Industry-leading wages with performance bonuses and opportunities for advancement</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">📈</div>
+                    <h3>Career Growth</h3>
+                    <p>Clear advancement paths from crew member to team lead to project manager</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">🛡️</div>
+                    <h3>Benefits Package</h3>
+                    <p>Health insurance, paid time off, and retirement plans for full-time employees</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">🎓</div>
+                    <h3>Training & Certification</h3>
+                    <p>Ongoing training and support for industry certifications (irrigation, pesticides, etc.)</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">⚙️</div>
+                    <h3>Modern Equipment</h3>
+                    <p>Work with the best tools and equipment in the industry</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">👥</div>
+                    <h3>Great Team Culture</h3>
+                    <p>Family-owned business with a supportive, respectful work environment</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="positions">
+        <div class="container">
+            <h2>Open Positions</h2>
+
+            <div class="job-card">
+                <h3>Irrigation Technician</h3>
+                <div class="job-meta">
+                    <span>📍 Orlando, FL</span>
+                    <span>💼 Full-Time</span>
+                    <span>💵 $18-$25/hr based on experience</span>
+                </div>
+                <div class="job-description">
+                    <p><strong>We're seeking an experienced irrigation technician to join our team!</strong></p>
+                    <p><strong>Responsibilities:</strong></p>
+                    <ul>
+                        <li>Install, repair, and maintain irrigation systems</li>
+                        <li>Troubleshoot controller and valve issues</li>
+                        <li>Perform system audits and efficiency upgrades</li>
+                        <li>Work with residential and commercial clients</li>
+                    </ul>
+                    <p><strong>Requirements:</strong></p>
+                    <ul>
+                        <li>2+ years irrigation experience preferred</li>
+                        <li>Valid driver's license</li>
+                        <li>Knowledge of Hunter, Rain Bird, or Toro systems</li>
+                        <li>Ability to work outdoors in Florida weather</li>
+                    </ul>
+                </div>
+                <a href="index.html#contact" class="apply-btn">Apply Now</a>
+            </div>
+
+            <div class="job-card">
+                <h3>Landscape Crew Member</h3>
+                <div class="job-meta">
+                    <span>📍 Orlando, FL</span>
+                    <span>💼 Full-Time</span>
+                    <span>💵 $15-$20/hr based on experience</span>
+                </div>
+                <div class="job-description">
+                    <p><strong>Join our hardworking landscape crew!</strong></p>
+                    <p><strong>Responsibilities:</strong></p>
+                    <ul>
+                        <li>Sod installation and grading</li>
+                        <li>Plant installation and mulching</li>
+                        <li>Hardscape installation (pavers, walkways)</li>
+                        <li>Operate hand tools and power equipment</li>
+                    </ul>
+                    <p><strong>Requirements:</strong></p>
+                    <ul>
+                        <li>1+ year landscaping experience (or strong willingness to learn)</li>
+                        <li>Reliable transportation</li>
+                        <li>Ability to lift 50+ lbs</li>
+                        <li>Team player with strong work ethic</li>
+                    </ul>
+                </div>
+                <a href="index.html#contact" class="apply-btn">Apply Now</a>
+            </div>
+
+            <div class="job-card">
+                <h3>Landscape Crew Leader</h3>
+                <div class="job-meta">
+                    <span>📍 Orlando, FL</span>
+                    <span>💼 Full-Time</span>
+                    <span>💵 $20-$28/hr + bonuses</span>
+                </div>
+                <div class="job-description">
+                    <p><strong>Lead our landscape installation crews to success!</strong></p>
+                    <p><strong>Responsibilities:</strong></p>
+                    <ul>
+                        <li>Manage 2-4 person crews on job sites</li>
+                        <li>Interpret landscape plans and execute installations</li>
+                        <li>Ensure quality, safety, and efficiency standards</li>
+                        <li>Communicate with clients and office staff</li>
+                        <li>Train and mentor crew members</li>
+                    </ul>
+                    <p><strong>Requirements:</strong></p>
+                    <ul>
+                        <li>3+ years landscaping experience</li>
+                        <li>Previous leadership/supervisory experience</li>
+                        <li>Valid driver's license (CDL a plus)</li>
+                        <li>Strong communication and problem-solving skills</li>
+                        <li>Knowledge of Florida plants and horticulture</li>
+                    </ul>
+                </div>
+                <a href="index.html#contact" class="apply-btn">Apply Now</a>
+            </div>
+
+            <div style="text-align: center; margin-top: 3rem; padding: 2rem; background: white; border-radius: 12px;">
+                <h3 style="color: var(--primary-blue); margin-bottom: 1rem;">Don't See Your Role?</h3>
+                <p style="margin-bottom: 1.5rem;">We're always looking for talented individuals. Send us your resume and tell us how you can contribute to our team!</p>
+                <a href="index.html#contact" class="apply-btn">Submit General Application</a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 C4 Ground Control. All rights reserved.</p>
+            <p style="margin-top: 1rem;"><a href="index.html">Home</a> | <a href="privacy.html">Privacy Policy</a> | <a href="terms.html">Terms of Service</a></p>
+        </div>
+    </footer>
+</body>
+</html>

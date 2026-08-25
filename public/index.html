@@ -1258,7 +1258,7 @@
             <div class="error-message" id="errorMessage">
                 ✗ <span id="errorText">Something went wrong. Please try again or call us directly at (407) 974-5864.</span>
             </div>
-            <form class="contact-form" id="contactForm">
+            <form class="contact-form" action="https://formsubmit.co/c4groundcontrol@gmail.com" method="POST">
                 <div class="form-grid">
                     <div class="form-group">
                         <label for="name">Full Name</label>
@@ -1290,6 +1290,13 @@
                         <textarea id="message" name="message" required></textarea>
                     </div>
                 </div>
+                
+                <!-- FormSubmit Config -->
+                <input type="hidden" name="_subject" value="New Quote Request from c4groundcontrol.com">
+                <input type="hidden" name="_captcha" value="false">
+                <input type="hidden" name="_template" value="table">
+                <input type="text" name="_honey" style="display:none">
+                
                 <button type="submit" class="submit-btn">Request Free Quote</button>
             </form>
         </div>

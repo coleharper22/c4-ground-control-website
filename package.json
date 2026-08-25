@@ -1,0 +1,9 @@
+{
+  "name": "c4-ground-control-website",
+  "version": "1.0.0",
+  "description": "C4 Ground Control - Professional Landscaping Services",
+  "private": true,
+  "engines": {
+    "node": ">=18.x"
+  }
+}

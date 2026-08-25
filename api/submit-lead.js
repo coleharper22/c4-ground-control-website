@@ -43,8 +43,8 @@ module.exports = async (req, res) => {
     // Create customer in HousecallPro
     const hcpResponse = await new Promise((resolve, reject) => {
       const options = {
-        hostname: 'app.housecallpro.com',
-        path: '/api/v1/customers',
+        hostname: 'api.housecallpro.com',
+        path: '/customers',
         method: 'POST',
         headers: {
           'Authorization': 'Token 10d6d33f386e4d0d9eba59e89313c53d',

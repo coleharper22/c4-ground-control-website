@@ -29,22 +29,26 @@ module.exports = async (req, res) => {
       });
     }
 
-    // Prepare HCP customer data
+    // Prepare HCP lead data
     const hcpData = JSON.stringify({
-      first_name: name.split(' ')[0] || name,
-      last_name: name.split(' ').slice(1).join(' ') || '',
-      email: email,
-      mobile_number: phone,
-      notifications_enabled: true,
-      tags: [service],
-      notes: `Service Interest: ${service}\n\nMessage: ${message}`
+      customer: {
+        first_name: name.split(' ')[0] || name,
+        last_name: name.split(' ').slice(1).join(' ') || '',
+        email: email,
+        mobile_number: phone,
+        notifications_enabled: true
+      },
+      source: 'Website - c4groundcontrol.com',
+      service_type: service,
+      description: `Service Interest: ${service}\n\nCustomer Message:\n${message}`,
+      tags: [service, 'Website Lead']
     });
 
-    // Create customer in HousecallPro
+    // Create lead in HousecallPro
     const hcpResponse = await new Promise((resolve, reject) => {
       const options = {
         hostname: 'api.housecallpro.com',
-        path: '/customers',
+        path: '/leads',
         method: 'POST',
         headers: {
           'Authorization': 'Token 10d6d33f386e4d0d9eba59e89313c53d',

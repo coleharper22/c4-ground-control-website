@@ -1416,18 +1416,23 @@
             };
             
             try {
-                // Submit to API
-                const response = await fetch('/api/submit-lead', {
+                // Submit directly to HousecallPro API
+                const response = await fetch('https://api.housecallpro.com/customers', {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json',
+                        'Authorization': 'Bearer 10d6d33f386e4d0d9eba59e89313c53d'
                     },
-                    body: JSON.stringify(formData)
+                    body: JSON.stringify({
+                        first_name: formData.name.split(' ')[0],
+                        last_name: formData.name.split(' ').slice(1).join(' ') || '',
+                        email: formData.email,
+                        mobile_number: formData.phone,
+                        notes: `Service: ${formData.service}\n\nMessage: ${formData.message}\n\nSource: c4groundcontrol.com contact form`
+                    })
                 });
                 
-                const result = await response.json();
-                
-                if (result.success) {
+                if (response.ok) {
                     // Show success message
                     successMessage.classList.add('show');
                     

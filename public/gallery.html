@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="About C4 Ground Control - Learn about our team, mission, and commitment to excellence in landscaping services throughout Orlando, FL.">
-    <title>About Us | C4 Ground Control</title>
+    <meta name="description" content="Browse our portfolio of completed landscaping projects in Orlando, FL. View our work in irrigation, sod installation, drainage, lighting, and more.">
+    <title>Our Work Gallery | C4 Ground Control</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
@@ -168,150 +168,136 @@
             margin: 0 auto;
         }
 
-        /* Content Section */
-        .content-section {
+        /* Gallery Section */
+        .gallery-section {
             padding: 6rem 2rem;
+            background: white;
+        }
+
+        .gallery-container {
             max-width: 1400px;
             margin: 0 auto;
         }
 
-        .content-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 4rem;
-            align-items: center;
-            margin-bottom: 6rem;
-        }
-
-        .content-grid.reverse {
-            direction: rtl;
-        }
-
-        .content-grid.reverse > * {
-            direction: ltr;
-        }
-
-        .content-text h2 {
-            font-size: 2.5rem;
-            margin-bottom: 1.5rem;
-            color: var(--primary-green);
-            font-weight: 800;
-        }
-
-        .content-text h2 span {
-            color: var(--primary-blue);
-        }
-
-        .content-text p {
-            font-size: 1.1rem;
-            color: #555;
-            margin-bottom: 1.5rem;
-            line-height: 1.8;
-        }
-
-        .content-text ul {
-            list-style: none;
-            margin: 1.5rem 0;
-        }
-
-        .content-text ul li {
-            padding: 0.75rem 0;
-            padding-left: 2rem;
-            position: relative;
-            font-size: 1.05rem;
-            color: #555;
-        }
-
-        .content-text ul li::before {
-            content: '✓';
-            position: absolute;
-            left: 0;
-            color: var(--primary-green);
-            font-weight: 700;
-            font-size: 1.2rem;
-        }
-
-        .content-image {
-            position: relative;
-            border-radius: 20px;
-            overflow: hidden;
-            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
-        }
-
-        .content-image img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            display: block;
-        }
-
-        /* Values Section */
-        .values-section {
-            background: #f9f9f9;
-            padding: 6rem 2rem;
-        }
-
-        .values-container {
-            max-width: 1400px;
-            margin: 0 auto;
-        }
-
-        .section-header {
+        .section-intro {
             text-align: center;
             max-width: 800px;
             margin: 0 auto 4rem;
         }
 
-        .section-header h2 {
-            font-size: 3rem;
+        .section-intro h2 {
+            font-size: 2.5rem;
             font-weight: 800;
             margin-bottom: 1rem;
             color: var(--primary-green);
         }
 
-        .section-header h2 span {
+        .section-intro h2 span {
             color: var(--primary-blue);
         }
 
-        .section-header p {
+        .section-intro p {
             font-size: 1.2rem;
             color: #666;
+            line-height: 1.8;
         }
 
-        .values-grid {
+        .gallery-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2.5rem;
+            gap: 2rem;
         }
 
-        .value-card {
-            background: white;
-            padding: 2.5rem;
+        .gallery-item {
+            position: relative;
+            height: 350px;
             border-radius: 15px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+            overflow: hidden;
+            cursor: pointer;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
             transition: var(--transition-smooth);
         }
 
-        .value-card:hover {
+        .gallery-item:hover {
             transform: translateY(-10px);
-            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15);
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.2);
         }
 
-        .value-icon {
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: var(--transition-smooth);
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.1);
+        }
+
+        .gallery-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(135deg, rgba(13, 92, 184, 0.9) 0%, rgba(0, 107, 63, 0.9) 100%);
+            opacity: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: var(--transition-smooth);
+        }
+
+        .gallery-item:hover .gallery-overlay {
+            opacity: 1;
+        }
+
+        .gallery-overlay-text {
+            color: white;
+            font-size: 1.3rem;
+            font-weight: 600;
+            text-align: center;
+            padding: 1rem;
+        }
+
+        /* CTA Section */
+        .cta-section {
+            background: linear-gradient(135deg, var(--primary-blue) 0%, var(--primary-green) 100%);
+            color: white;
+            padding: 6rem 2rem;
+            text-align: center;
+        }
+
+        .cta-section h2 {
             font-size: 3rem;
             margin-bottom: 1.5rem;
+            font-weight: 800;
         }
 
-        .value-card h3 {
-            font-size: 1.5rem;
-            margin-bottom: 1rem;
+        .cta-section p {
+            font-size: 1.3rem;
+            margin-bottom: 2.5rem;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .btn-white {
+            display: inline-block;
+            background: white;
             color: var(--primary-blue);
+            padding: 1.2rem 3rem;
+            border-radius: 50px;
+            font-weight: 700;
+            font-size: 1.1rem;
+            text-decoration: none;
+            transition: var(--transition-smooth);
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
         }
 
-        .value-card p {
-            color: #666;
-            font-size: 1rem;
-            line-height: 1.7;
+        .btn-white:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 40px rgba(0, 0, 0, 0.3);
         }
 
         /* Footer */
@@ -428,15 +414,21 @@
                 font-size: 2.5rem;
             }
 
-            .content-grid {
-                grid-template-columns: 1fr;
+            .gallery-grid {
+                grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
             }
 
-            .content-grid.reverse {
-                direction: ltr;
+            .cta-section h2 {
+                font-size: 2rem;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .page-header h1 {
+                font-size: 2rem;
             }
 
-            .values-grid {
+            .gallery-grid {
                 grid-template-columns: 1fr;
             }
         }
@@ -463,87 +455,185 @@
     <!-- Page Header -->
     <section class="page-header">
         <div>
-            <h1>About <span>C4 Ground Control</span></h1>
-            <p>Excellence in landscaping since 2009</p>
+            <h1>Our <span>Completed Projects</span></h1>
+            <p>Browse our portfolio of beautiful landscapes across Central Florida</p>
         </div>
     </section>
 
-    <!-- Content Section -->
-    <section class="content-section">
-        <div class="content-grid">
-            <div class="content-text">
-                <h2><span>Our</span> Story</h2>
-                <p>C4 Ground Control was founded in 2009 with a simple mission: to transform outdoor spaces throughout Orlando and Central Florida with unmatched quality and professionalism.</p>
-                <p>Starting with just a small crew and a commitment to excellence, we've grown into one of the region's most trusted landscaping companies. Our reputation is built on delivering exceptional results, treating every property as if it were our own, and standing behind our work with pride.</p>
-                <p>Today, we're proud to serve residential and commercial clients throughout the Orlando area with a full range of landscaping services including irrigation, sod installation, drainage solutions, landscape lighting, and complete design-build projects.</p>
+    <!-- Gallery Section -->
+    <section class="gallery-section">
+        <div class="gallery-container">
+            <div class="section-intro">
+                <h2><span>Our</span> Work</h2>
+                <p>From residential landscapes to commercial installations, each project represents our commitment to quality, attention to detail, and client satisfaction.</p>
             </div>
-            <div class="content-image">
-                <img src="images/topline/topline-01.jpeg" alt="C4 Ground Control Professional Landscape">
-            </div>
-        </div>
 
-        <div class="content-grid reverse">
-            <div class="content-text">
-                <h2><span>Why Choose</span> Us</h2>
-                <p>We're not just another landscaping company. Here's what sets us apart:</p>
-                <ul>
-                    <li>Over 15 years of experience in Central Florida landscaping</li>
-                    <li>Fully licensed and insured for your protection</li>
-                    <li>Experienced, professional crews who take pride in their work</li>
-                    <li>Attention to detail on every project, large or small</li>
-                    <li>Quality materials and proven installation methods</li>
-                    <li>Transparent pricing with no hidden fees</li>
-                    <li>100% customer satisfaction guarantee</li>
-                    <li>On-time project completion</li>
-                </ul>
-                <p>Our commitment to quality has earned us hundreds of satisfied customers and a portfolio of beautiful landscapes across Orlando and the surrounding areas.</p>
-            </div>
-            <div class="content-image">
-                <img src="images/topline/topline-01.jpeg" alt="Beautiful Landscape">
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <img src="images/topline/topline-01.jpeg" alt="Professional Landscape Design">
+                    <div class="gallery-overlay">
+                        <span class="gallery-overlay-text">Landscape Design</span>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/topline/topline-04.jpg" alt="Irrigation System Installation">
+                    <div class="gallery-overlay">
+                        <span class="gallery-overlay-text">Irrigation System</span>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/topline/topline-07.jpg" alt="Sports Field Installation">
+                    <div class="gallery-overlay">
+                        <span class="gallery-overlay-text">Sports Field</span>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/topline/topline-08.jpg" alt="Athletic Field Project">
+                    <div class="gallery-overlay">
+                        <span class="gallery-overlay-text">Athletic Field</span>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/topline/topline-09.jpg" alt="Commercial Landscape">
+                    <div class="gallery-overlay">
+                        <span class="gallery-overlay-text">Commercial Project</span>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/topline/topline-10.jpg" alt="Field Installation">
+                    <div class="gallery-overlay">
+                        <span class="gallery-overlay-text">Field Installation</span>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/topline/topline-11.jpg" alt="Landscape Project">
+                    <div class="gallery-overlay">
+                        <span class="gallery-overlay-text">Landscape Project</span>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/topline/topline-12.jpg" alt="Professional Installation">
+                    <div class="gallery-overlay">
+                        <span class="gallery-overlay-text">Professional Install</span>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/projects/project-03.jpg" alt="Stadium Field Project">
+                    <div class="gallery-overlay">
+                        <span class="gallery-overlay-text">Stadium Project</span>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/projects/project-04.jpg" alt="Landscape Installation">
+                    <div class="gallery-overlay">
+                        <span class="gallery-overlay-text">Landscape Installation</span>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/projects/project-05.jpg" alt="Landscape Lighting">
+                    <div class="gallery-overlay">
+                        <span class="gallery-overlay-text">Landscape Lighting</span>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/projects/project-07.jpg" alt="Stadium Field">
+                    <div class="gallery-overlay">
+                        <span class="gallery-overlay-text">Stadium Field</span>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/projects/project-09.jpg" alt="Mulch & Plant Beds">
+                    <div class="gallery-overlay">
+                        <span class="gallery-overlay-text">Mulch & Beds</span>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/projects/project-10.jpg" alt="Paver Walkway">
+                    <div class="gallery-overlay">
+                        <span class="gallery-overlay-text">Hardscaping</span>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/projects/project-11.jpg" alt="Sod Installation">
+                    <div class="gallery-overlay">
+                        <span class="gallery-overlay-text">Sod Installation</span>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/projects/project-15.jpg" alt="Field Project">
+                    <div class="gallery-overlay">
+                        <span class="gallery-overlay-text">Field Project</span>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/projects/project-16.jpg" alt="Landscape & Sod">
+                    <div class="gallery-overlay">
+                        <span class="gallery-overlay-text">Landscape & Sod</span>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/projects/project-17.jpg" alt="Sports Field">
+                    <div class="gallery-overlay">
+                        <span class="gallery-overlay-text">Sports Field</span>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/projects/project-18.jpg" alt="Soccer Field">
+                    <div class="gallery-overlay">
+                        <span class="gallery-overlay-text">Soccer Field</span>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/projects/project-19.jpg" alt="Baseball Field">
+                    <div class="gallery-overlay">
+                        <span class="gallery-overlay-text">Baseball Field</span>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/recent-jobs/recent-01.jpg" alt="Lush Sod Installation">
+                    <div class="gallery-overlay">
+                        <span class="gallery-overlay-text">Sod Installation</span>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/recent-jobs/recent-06.jpg" alt="Mulch Bed Design">
+                    <div class="gallery-overlay">
+                        <span class="gallery-overlay-text">Mulch Bed Design</span>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/recent-jobs/recent-07.jpg" alt="Sod Field">
+                    <div class="gallery-overlay">
+                        <span class="gallery-overlay-text">Sod Field</span>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/recent-jobs/recent-08.jpg" alt="Commercial Sod">
+                    <div class="gallery-overlay">
+                        <span class="gallery-overlay-text">Commercial Sod</span>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/recent-jobs/recent-09.jpg" alt="Professional Sod Installation">
+                    <div class="gallery-overlay">
+                        <span class="gallery-overlay-text">Sod Installation</span>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/recent-jobs/recent-12.jpg" alt="Residential Landscape">
+                    <div class="gallery-overlay">
+                        <span class="gallery-overlay-text">Residential Landscape</span>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- Values Section -->
-    <section class="values-section">
-        <div class="values-container">
-            <div class="section-header">
-                <h2>Our <span>Values</span></h2>
-                <p>The principles that guide everything we do</p>
-            </div>
-            <div class="values-grid">
-                <div class="value-card">
-                    <div class="value-icon">🎯</div>
-                    <h3>Quality First</h3>
-                    <p>We never compromise on quality. From the materials we use to the techniques we employ, excellence is our standard on every project.</p>
-                </div>
-                <div class="value-card">
-                    <div class="value-icon">🤝</div>
-                    <h3>Integrity</h3>
-                    <p>Honest communication, fair pricing, and standing behind our work. We build relationships based on trust and deliver on our promises.</p>
-                </div>
-                <div class="value-card">
-                    <div class="value-icon">💡</div>
-                    <h3>Innovation</h3>
-                    <p>We stay current with the latest landscaping techniques, materials, and sustainable practices to deliver the best solutions for your property.</p>
-                </div>
-                <div class="value-card">
-                    <div class="value-icon">⭐</div>
-                    <h3>Customer Service</h3>
-                    <p>Your satisfaction is our priority. We listen to your vision, communicate clearly throughout the process, and ensure you love the final result.</p>
-                </div>
-                <div class="value-card">
-                    <div class="value-icon">🌱</div>
-                    <h3>Environmental Responsibility</h3>
-                    <p>We use water-efficient irrigation systems, sustainable materials, and eco-friendly practices to protect Florida's natural beauty.</p>
-                </div>
-                <div class="value-card">
-                    <div class="value-icon">🏆</div>
-                    <h3>Pride in Workmanship</h3>
-                    <p>Our team takes genuine pride in every project. We're not satisfied until you're thrilled with your transformed outdoor space.</p>
-                </div>
-            </div>
-        </div>
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <h2>Ready to Start Your Project?</h2>
+        <p>Let's transform your outdoor space. Get a free estimate and see why hundreds of Central Florida homeowners trust C4 Ground Control.</p>
+        <a href="index.html#contact" class="btn-white">Get Your Free Quote</a>
     </section>
 
     <!-- Footer -->
@@ -607,21 +697,12 @@
             mobileMenuToggle.textContent = navLinks.classList.contains('active') ? '✕' : '☰';
         });
 
+        // Close mobile menu when clicking a link
         navLinks.querySelectorAll('a').forEach(link => {
             link.addEventListener('click', () => {
                 navLinks.classList.remove('active');
                 mobileMenuToggle.textContent = '☰';
             });
-        });
-
-        // Header background change on scroll
-        window.addEventListener('scroll', () => {
-            const header = document.querySelector('header');
-            if (window.scrollY > 100) {
-                header.style.background = 'rgba(13, 13, 13, 0.98)';
-            } else {
-                header.style.background = 'rgba(26, 26, 26, 0.98)';
-            }
         });
     </script>
 </body>

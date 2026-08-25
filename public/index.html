@@ -415,68 +415,173 @@
             line-height: 1.6;
         }
 
-        /* Gallery Section */
-        .gallery {
+        /* Why Choose C4 Section */
+        .why-choose {
             padding: 6rem 2rem;
             background: #f9f9f9;
         }
 
-        .gallery-grid {
+        .why-choose-container {
             max-width: 1400px;
             margin: 0 auto;
+        }
+
+        .why-choose-content {
+            background: white;
+            padding: 4rem;
+            border-radius: 20px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+        }
+
+        .story-section {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 1.5rem;
+            grid-template-columns: 1.2fr 1fr;
+            gap: 3rem;
+            align-items: center;
+            margin: 3rem 0;
+            padding: 3rem 0;
+            border-bottom: 2px solid #f0f0f0;
         }
 
-        .gallery-item {
-            position: relative;
-            height: 350px;
-            border-radius: 12px;
+        .story-content h3 {
+            font-size: 2rem;
+            color: var(--primary-green);
+            margin-bottom: 1.5rem;
+            font-weight: 800;
+        }
+
+        .story-content h3 span {
+            color: var(--primary-blue);
+        }
+
+        .story-content p {
+            font-size: 1.1rem;
+            color: #555;
+            line-height: 1.8;
+            margin-bottom: 1rem;
+        }
+
+        .story-image {
+            border-radius: 15px;
             overflow: hidden;
-            cursor: pointer;
-            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
-            transition: var(--transition-smooth);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
         }
 
-        .gallery-item:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
-        }
-
-        .gallery-item img {
+        .story-image img {
             width: 100%;
             height: 100%;
             object-fit: cover;
-            transition: var(--transition-smooth);
+            display: block;
         }
 
-        .gallery-item:hover img {
-            transform: scale(1.08);
+        .mission-section {
+            padding: 3rem 0;
+            border-bottom: 2px solid #f0f0f0;
         }
 
-        .gallery-overlay {
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: linear-gradient(135deg, rgba(13, 92, 184, 0.9) 0%, rgba(0, 107, 63, 0.9) 100%);
-            opacity: 0;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            transition: var(--transition-smooth);
+        .mission-section h3 {
+            font-size: 2rem;
+            color: var(--primary-green);
+            margin-bottom: 1.5rem;
+            font-weight: 800;
         }
 
-        .gallery-item:hover .gallery-overlay {
-            opacity: 1;
+        .mission-section h3 span {
+            color: var(--primary-blue);
         }
 
-        .gallery-overlay-text {
-            color: white;
+        .mission-section p {
             font-size: 1.2rem;
-            font-weight: 600;
+            color: #555;
+            line-height: 1.8;
+        }
+
+        .trust-section {
+            padding: 3rem 0;
+        }
+
+        .trust-section h3 {
+            font-size: 2rem;
+            color: var(--primary-green);
+            margin-bottom: 2.5rem;
+            text-align: center;
+            font-weight: 800;
+        }
+
+        .trust-section h3 span {
+            color: var(--primary-blue);
+        }
+
+        .trust-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .trust-card {
+            background: #f9f9f9;
+            padding: 2rem;
+            border-radius: 15px;
+            transition: var(--transition-smooth);
+            border: 2px solid transparent;
+        }
+
+        .trust-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            border-color: var(--primary-blue);
+        }
+
+        .trust-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .trust-card h4 {
+            font-size: 1.3rem;
+            color: var(--primary-blue);
+            margin-bottom: 0.75rem;
+            font-weight: 700;
+        }
+
+        .trust-card p {
+            font-size: 1rem;
+            color: #666;
+            line-height: 1.6;
+        }
+
+        .cta-box {
+            background: linear-gradient(135deg, var(--primary-blue) 0%, var(--primary-green) 100%);
+            padding: 3rem;
+            border-radius: 15px;
+            text-align: center;
+            margin-top: 3rem;
+        }
+
+        .cta-box h3 {
+            font-size: 2rem;
+            color: white;
+            margin-bottom: 1rem;
+            font-weight: 800;
+        }
+
+        .cta-box p {
+            font-size: 1.2rem;
+            color: rgba(255, 255, 255, 0.95);
+            margin-bottom: 2rem;
+        }
+
+        .cta-box .btn-primary {
+            background: white;
+            color: var(--primary-blue);
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        .cta-box .btn-primary:hover {
+            background: #f0f0f0;
+            transform: translateY(-3px);
+            box-shadow: 0 12px 40px rgba(0, 0, 0, 0.3);
         }
 
         /* Contact Section */
@@ -770,8 +875,16 @@
                 grid-template-columns: 1fr;
             }
 
-            .gallery-grid {
-                grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            .story-section {
+                grid-template-columns: 1fr;
+            }
+
+            .trust-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .why-choose-content {
+                padding: 2rem;
             }
 
             .form-grid {
@@ -814,7 +927,7 @@
                 <li><a href="about.html">About Us</a></li>
                 <li><a href="#services">Services</a></li>
                 <li><a href="services.html">All Services</a></li>
-                <li><a href="#gallery">Gallery</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
                 <li><a href="#contact" class="cta-button">Get A Quote</a></li>
             </ul>
             <button class="mobile-menu-toggle" id="mobileMenuToggle">☰</button>
@@ -869,49 +982,42 @@
         </div>
         <div class="services-grid">
             <div class="service-card">
-                <img src="images/recent-jobs/recent-16.jpg" alt="Irrigation Services">
+                <img src="images/service-irrigation.jpg" alt="Irrigation Services">
                 <div class="service-overlay">
                     <h3>Irrigation Systems</h3>
                     <p>Professional design and installation of efficient irrigation systems to keep your landscape thriving year-round.</p>
                 </div>
             </div>
             <div class="service-card">
-                <img src="images/recent-jobs/recent-01.jpg" alt="Sod Installation">
+                <img src="images/service-sod.jpg" alt="Sod Installation">
                 <div class="service-overlay">
                     <h3>Sod Installation</h3>
                     <p>Premium sod installation for lush, beautiful lawns that transform your property instantly.</p>
                 </div>
             </div>
             <div class="service-card">
-                <img src="images/topline/topline-07.jpg" alt="Drainage Solutions">
-                <div class="service-overlay">
-                    <h3>Drainage Solutions</h3>
-                    <p>Expert drainage systems to protect your property from water damage and erosion.</p>
-                </div>
-            </div>
-            <div class="service-card">
-                <img src="images/projects/project-05.jpg" alt="Landscape Lighting">
+                <img src="images/service-lighting.jpg" alt="Landscape Lighting">
                 <div class="service-overlay">
                     <h3>Landscape Lighting</h3>
                     <p>Beautiful outdoor lighting design that enhances safety and showcases your landscape at night.</p>
                 </div>
             </div>
             <div class="service-card">
-                <img src="images/recent-jobs/recent-06.jpg" alt="Mulching & Bed Design">
+                <img src="images/service-mulch.jpg" alt="Mulching & Bed Design">
                 <div class="service-overlay">
                     <h3>Mulching & Beds</h3>
                     <p>Professional mulching and bed design to enhance curb appeal and plant health.</p>
                 </div>
             </div>
             <div class="service-card">
-                <img src="images/projects/project-10.jpg" alt="Hardscaping">
+                <img src="images/service-hardscape.jpg" alt="Hardscaping">
                 <div class="service-overlay">
                     <h3>Hardscaping</h3>
                     <p>Custom pavers, walkways, and retaining walls that add structure and beauty to your outdoor space.</p>
                 </div>
             </div>
             <div class="service-card">
-                <img src="images/topline/topline-01.jpeg" alt="Full Landscape Design">
+                <img src="images/service-landscape.jpg" alt="Full Landscape Design">
                 <div class="service-overlay">
                     <h3>Landscape Design</h3>
                     <p>Complete landscape design and installation services from concept to completion.</p>
@@ -920,167 +1026,71 @@
         </div>
     </section>
 
-    <!-- Gallery Section -->
-    <section class="gallery" id="gallery">
-        <div class="section-header">
-            <h2><span>Our</span> Work</h2>
-            <p>Browse our portfolio of completed projects</p>
-        </div>
-        <div class="gallery-grid">
-            <div class="gallery-item">
-                <img src="images/topline/topline-01.jpeg" alt="Landscape Design Project">
-                <div class="gallery-overlay">
-                    <span class="gallery-overlay-text">Landscape Design</span>
+    <!-- Why Choose C4 Section -->
+    <section class="why-choose" id="why-choose">
+        <div class="why-choose-container">
+            <div class="why-choose-content">
+                <div class="section-header">
+                    <h2>Why Choose <span>C4 Ground Control</span></h2>
+                    <p>Family-owned, locally trusted, personally committed</p>
                 </div>
-            </div>
-            <div class="gallery-item">
-                <img src="images/topline/topline-04.jpg" alt="Irrigation System">
-                <div class="gallery-overlay">
-                    <span class="gallery-overlay-text">Irrigation System</span>
+
+                <div class="story-section">
+                    <div class="story-content">
+                        <h3><span>Our Story</span></h3>
+                        <p>Family-owned and operated since 2009, C4 Ground Control has been transforming outdoor spaces throughout Central Florida for over 15 years. What started as a small crew with big dreams has grown into one of Orlando's most trusted landscaping companies — but we've never forgotten our roots.</p>
+                        <p>We're not a corporate franchise. We're your neighbors. Every project matters to us because your satisfaction is our reputation in this community.</p>
+                    </div>
+                    <div class="story-image">
+                        <img src="images/topline/topline-01.jpeg" alt="C4 Ground Control Team">
+                    </div>
                 </div>
-            </div>
-            <div class="gallery-item">
-                <img src="images/topline/topline-07.jpg" alt="Sports Field Project">
-                <div class="gallery-overlay">
-                    <span class="gallery-overlay-text">Sports Field</span>
+
+                <div class="mission-section">
+                    <h3><span>Our Mission</span></h3>
+                    <p>To deliver exceptional landscaping services with integrity, craftsmanship, and genuine care. We treat every property like it's our own — because in this community, our work speaks for itself.</p>
                 </div>
-            </div>
-            <div class="gallery-item">
-                <img src="images/topline/topline-08.jpg" alt="Athletic Field">
-                <div class="gallery-overlay">
-                    <span class="gallery-overlay-text">Athletic Field</span>
+
+                <div class="trust-section">
+                    <h3>Why Our Clients <span>Trust Us</span></h3>
+                    <div class="trust-grid">
+                        <div class="trust-card">
+                            <div class="trust-icon">🏡</div>
+                            <h4>15+ Years Serving Central Florida</h4>
+                            <p>Established in 2009, we've built hundreds of beautiful landscapes and earned the trust of our community through consistent quality and reliability.</p>
+                        </div>
+                        <div class="trust-card">
+                            <div class="trust-icon">✓</div>
+                            <h4>Licensed & Insured</h4>
+                            <p>Fully licensed and insured for your complete protection and peace of mind on every project, large or small.</p>
+                        </div>
+                        <div class="trust-card">
+                            <div class="trust-icon">👨‍🔧</div>
+                            <h4>Personally Oversee Every Project</h4>
+                            <p>We don't just send a crew — we're on-site, ensuring every detail meets our exacting standards and your vision.</p>
+                        </div>
+                        <div class="trust-card">
+                            <div class="trust-icon">💰</div>
+                            <h4>Free Estimates, No Surprises</h4>
+                            <p>Transparent pricing, detailed quotes, and no hidden fees. You'll know exactly what to expect before we start.</p>
+                        </div>
+                        <div class="trust-card">
+                            <div class="trust-icon">⭐</div>
+                            <h4>Stand Behind Our Work 100%</h4>
+                            <p>Your satisfaction is our guarantee. We're not happy until you're thrilled with the results — and we back that up.</p>
+                        </div>
+                        <div class="trust-card">
+                            <div class="trust-icon">🌱</div>
+                            <h4>Quality Materials, Expert Methods</h4>
+                            <p>Premium sod, professional-grade irrigation, and proven installation techniques that ensure lasting beauty.</p>
+                        </div>
+                    </div>
                 </div>
-            </div>
-            <div class="gallery-item">
-                <img src="images/topline/topline-10.jpg" alt="Commercial Landscape">
-                <div class="gallery-overlay">
-                    <span class="gallery-overlay-text">Commercial Landscape</span>
-                </div>
-            </div>
-            <div class="gallery-item">
-                <img src="images/projects/project-03.jpg" alt="Eagles Stadium Field">
-                <div class="gallery-overlay">
-                    <span class="gallery-overlay-text">Stadium Project</span>
-                </div>
-            </div>
-            <div class="gallery-item">
-                <img src="images/projects/project-04.jpg" alt="Landscape Installation">
-                <div class="gallery-overlay">
-                    <span class="gallery-overlay-text">Landscape Installation</span>
-                </div>
-            </div>
-            <div class="gallery-item">
-                <img src="images/projects/project-05.jpg" alt="Landscape Lighting">
-                <div class="gallery-overlay">
-                    <span class="gallery-overlay-text">Landscape Lighting</span>
-                </div>
-            </div>
-            <div class="gallery-item">
-                <img src="images/projects/project-07.jpg" alt="Stadium Field">
-                <div class="gallery-overlay">
-                    <span class="gallery-overlay-text">Stadium Field</span>
-                </div>
-            </div>
-            <div class="gallery-item">
-                <img src="images/projects/project-09.jpg" alt="Mulch & Plant Beds">
-                <div class="gallery-overlay">
-                    <span class="gallery-overlay-text">Mulch & Beds</span>
-                </div>
-            </div>
-            <div class="gallery-item">
-                <img src="images/projects/project-10.jpg" alt="Paver Walkway">
-                <div class="gallery-overlay">
-                    <span class="gallery-overlay-text">Hardscaping</span>
-                </div>
-            </div>
-            <div class="gallery-item">
-                <img src="images/projects/project-11.jpg" alt="Sod Installation">
-                <div class="gallery-overlay">
-                    <span class="gallery-overlay-text">Sod Installation</span>
-                </div>
-            </div>
-            <div class="gallery-item">
-                <img src="images/projects/project-15.jpg" alt="Field Project">
-                <div class="gallery-overlay">
-                    <span class="gallery-overlay-text">Field Project</span>
-                </div>
-            </div>
-            <div class="gallery-item">
-                <img src="images/projects/project-16.jpg" alt="Landscape & Sod">
-                <div class="gallery-overlay">
-                    <span class="gallery-overlay-text">Landscape & Sod</span>
-                </div>
-            </div>
-            <div class="gallery-item">
-                <img src="images/projects/project-17.jpg" alt="Sports Field">
-                <div class="gallery-overlay">
-                    <span class="gallery-overlay-text">Sports Field</span>
-                </div>
-            </div>
-            <div class="gallery-item">
-                <img src="images/projects/project-18.jpg" alt="Soccer Field">
-                <div class="gallery-overlay">
-                    <span class="gallery-overlay-text">Soccer Field</span>
-                </div>
-            </div>
-            <div class="gallery-item">
-                <img src="images/projects/project-19.jpg" alt="Baseball Field">
-                <div class="gallery-overlay">
-                    <span class="gallery-overlay-text">Baseball Field</span>
-                </div>
-            </div>
-            <div class="gallery-item">
-                <img src="images/recent-jobs/recent-01.jpg" alt="Lush Sod Installation">
-                <div class="gallery-overlay">
-                    <span class="gallery-overlay-text">Sod Installation</span>
-                </div>
-            </div>
-            <div class="gallery-item">
-                <img src="images/recent-jobs/recent-06.jpg" alt="Mulch Bed Design">
-                <div class="gallery-overlay">
-                    <span class="gallery-overlay-text">Mulch Bed Design</span>
-                </div>
-            </div>
-            <div class="gallery-item">
-                <img src="images/recent-jobs/recent-07.jpg" alt="Sod Field">
-                <div class="gallery-overlay">
-                    <span class="gallery-overlay-text">Sod Field</span>
-                </div>
-            </div>
-            <div class="gallery-item">
-                <img src="images/recent-jobs/recent-08.jpg" alt="Commercial Sod">
-                <div class="gallery-overlay">
-                    <span class="gallery-overlay-text">Commercial Sod</span>
-                </div>
-            </div>
-            <div class="gallery-item">
-                <img src="images/recent-jobs/recent-09.jpg" alt="Professional Sod Installation">
-                <div class="gallery-overlay">
-                    <span class="gallery-overlay-text">Sod Installation</span>
-                </div>
-            </div>
-            <div class="gallery-item">
-                <img src="images/recent-jobs/recent-12.jpg" alt="Residential Sod & Landscape">
-                <div class="gallery-overlay">
-                    <span class="gallery-overlay-text">Residential Landscape</span>
-                </div>
-            </div>
-            <div class="gallery-item">
-                <img src="images/recent-jobs/recent-16.jpg" alt="Mulch Bed with Irrigation">
-                <div class="gallery-overlay">
-                    <span class="gallery-overlay-text">Mulch & Irrigation</span>
-                </div>
-            </div>
-            <div class="gallery-item">
-                <img src="images/recent-jobs/recent-18.jpg" alt="Backyard Sod">
-                <div class="gallery-overlay">
-                    <span class="gallery-overlay-text">Backyard Sod</span>
-                </div>
-            </div>
-            <div class="gallery-item">
-                <img src="images/recent-jobs/recent-20.jpg" alt="Landscape Project">
-                <div class="gallery-overlay">
-                    <span class="gallery-overlay-text">Landscape Project</span>
+
+                <div class="cta-box">
+                    <h3>Ready to Transform Your Outdoor Space?</h3>
+                    <p>Let's discuss your project. Free estimates, honest advice, and quality work you can count on.</p>
+                    <a href="#contact" class="btn-primary">Get Your Free Quote Today</a>
                 </div>
             </div>
         </div>
@@ -1119,7 +1129,6 @@
                             <option value="">Select a service</option>
                             <option value="irrigation">Irrigation Systems</option>
                             <option value="sod">Sod Installation</option>
-                            <option value="drainage">Drainage Solutions</option>
                             <option value="lighting">Landscape Lighting</option>
                             <option value="mulching">Mulching & Beds</option>
                             <option value="hardscaping">Hardscaping</option>
@@ -1149,7 +1158,6 @@
                 <h3>Services</h3>
                 <a href="#services">Irrigation Systems</a>
                 <a href="#services">Sod Installation</a>
-                <a href="#services">Drainage Solutions</a>
                 <a href="#services">Landscape Lighting</a>
                 <a href="#services">Mulching & Beds</a>
                 <a href="#services">Hardscaping</a>

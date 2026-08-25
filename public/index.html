@@ -729,6 +729,21 @@
         @media (max-width: 968px) {
             .nav-links {
                 display: none;
+                position: fixed;
+                top: 80px;
+                left: 0;
+                right: 0;
+                background: rgba(13, 13, 13, 0.98);
+                backdrop-filter: blur(12px);
+                flex-direction: column;
+                padding: 2rem;
+                gap: 1.5rem;
+                border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+                box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            }
+
+            .nav-links.active {
+                display: flex;
             }
 
             .mobile-menu-toggle {
@@ -794,13 +809,15 @@
             <a href="#" class="logo">
                 <img src="logo-full.jpg" alt="C4 Ground Control">
             </a>
-            <ul class="nav-links">
+            <ul class="nav-links" id="navLinks">
                 <li><a href="#about">About</a></li>
+                <li><a href="about.html">About Us</a></li>
                 <li><a href="#services">Services</a></li>
+                <li><a href="services.html">All Services</a></li>
                 <li><a href="#gallery">Gallery</a></li>
                 <li><a href="#contact" class="cta-button">Get A Quote</a></li>
             </ul>
-            <button class="mobile-menu-toggle">☰</button>
+            <button class="mobile-menu-toggle" id="mobileMenuToggle">☰</button>
         </nav>
     </header>
 
@@ -852,21 +869,21 @@
         </div>
         <div class="services-grid">
             <div class="service-card">
-                <img src="images/topline/topline-02.jpeg" alt="Irrigation Services">
+                <img src="images/topline/topline-04.jpg" alt="Irrigation Services">
                 <div class="service-overlay">
                     <h3>Irrigation Systems</h3>
                     <p>Professional design and installation of efficient irrigation systems to keep your landscape thriving year-round.</p>
                 </div>
             </div>
             <div class="service-card">
-                <img src="images/projects/project-01.jpg" alt="Sod Installation">
+                <img src="images/recent-jobs/recent-09.jpg" alt="Sod Installation">
                 <div class="service-overlay">
                     <h3>Sod Installation</h3>
                     <p>Premium sod installation for lush, beautiful lawns that transform your property instantly.</p>
                 </div>
             </div>
             <div class="service-card">
-                <img src="images/topline/topline-04.jpg" alt="Drainage Solutions">
+                <img src="images/topline/topline-07.jpg" alt="Drainage Solutions">
                 <div class="service-overlay">
                     <h3>Drainage Solutions</h3>
                     <p>Expert drainage systems to protect your property from water damage and erosion.</p>
@@ -880,7 +897,7 @@
                 </div>
             </div>
             <div class="service-card">
-                <img src="images/topline/topline-07.jpg" alt="Mulching & Bed Design">
+                <img src="images/recent-jobs/recent-12.jpg" alt="Mulching & Bed Design">
                 <div class="service-overlay">
                     <h3>Mulching & Beds</h3>
                     <p>Professional mulching and bed design to enhance curb appeal and plant health.</p>
@@ -894,7 +911,7 @@
                 </div>
             </div>
             <div class="service-card">
-                <img src="images/topline/topline-10.jpg" alt="Full Landscape Design">
+                <img src="images/topline/topline-01.jpeg" alt="Full Landscape Design">
                 <div class="service-overlay">
                     <h3>Landscape Design</h3>
                     <p>Complete landscape design and installation services from concept to completion.</p>
@@ -1222,11 +1239,28 @@
             </div>
         </div>
         <div class="footer-bottom">
-            <p>&copy; 2024 C4 Ground Control. All rights reserved. | <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
+            <p>&copy; 2024 C4 Ground Control. All rights reserved. | <a href="privacy.html">Privacy Policy</a> | <a href="terms.html">Terms of Service</a></p>
         </div>
     </footer>
 
     <script>
+        // Mobile menu toggle
+        const mobileMenuToggle = document.getElementById('mobileMenuToggle');
+        const navLinks = document.getElementById('navLinks');
+        
+        mobileMenuToggle.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+            mobileMenuToggle.textContent = navLinks.classList.contains('active') ? '✕' : '☰';
+        });
+
+        // Close mobile menu when clicking a link
+        navLinks.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('active');
+                mobileMenuToggle.textContent = '☰';
+            });
+        });
+
         // Smooth scrolling for navigation links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {

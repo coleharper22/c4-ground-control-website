@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Terms of Service for C4 Ground Control - The terms and conditions governing use of our website and services.">
+    <title>Terms of Service | C4 Ground Control</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary-blue: #0D5CB8;
+            --primary-green: #006B3F;
+            --dark-bg: #1a1a1a;
+            --darker-bg: #0d0d0d;
+            --text-light: #ffffff;
+            --text-gray: #a0a0a0;
+            --transition-smooth: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            overflow-x: hidden;
+        }
+
+        /* Header & Navigation */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            background: rgba(26, 26, 26, 0.98);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            transition: var(--transition-smooth);
+        }
+
+        nav {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+
+        .logo img {
+            height: 50px;
+            width: auto;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2.5rem;
+            list-style: none;
+            align-items: center;
+        }
+
+        .nav-links a {
+            color: var(--text-light);
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.95rem;
+            transition: var(--transition-smooth);
+        }
+
+        .nav-links a:hover {
+            color: var(--primary-blue);
+        }
+
+        .cta-button {
+            background: var(--primary-blue);
+            color: white;
+            padding: 0.75rem 1.75rem;
+            border-radius: 50px;
+            font-weight: 600;
+        }
+
+        .mobile-menu-toggle {
+            display: none;
+            background: none;
+            border: none;
+            color: var(--text-light);
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
+        /* Page Content */
+        .page-container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 10rem 2rem 6rem;
+        }
+
+        h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            color: var(--primary-green);
+            font-weight: 800;
+        }
+
+        h1 span {
+            color: var(--primary-blue);
+        }
+
+        .last-updated {
+            color: #666;
+            font-size: 1rem;
+            margin-bottom: 3rem;
+        }
+
+        h2 {
+            font-size: 1.8rem;
+            margin-top: 3rem;
+            margin-bottom: 1rem;
+            color: var(--primary-blue);
+            font-weight: 700;
+        }
+
+        p {
+            font-size: 1.05rem;
+            color: #555;
+            margin-bottom: 1.5rem;
+            line-height: 1.8;
+        }
+
+        ul {
+            margin: 1rem 0 1.5rem 2rem;
+            line-height: 1.8;
+        }
+
+        ul li {
+            margin-bottom: 0.5rem;
+            color: #555;
+        }
+
+        strong {
+            color: #333;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--darker-bg);
+            color: var(--text-light);
+            padding: 3rem 2rem 2rem;
+        }
+
+        .footer-content {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 3rem;
+            margin-bottom: 2rem;
+        }
+
+        .footer-section h3 {
+            color: var(--primary-blue);
+            margin-bottom: 1rem;
+            font-size: 1.3rem;
+        }
+
+        .footer-section p,
+        .footer-section a {
+            color: var(--text-gray);
+            text-decoration: none;
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+
+        .footer-section a:hover {
+            color: var(--primary-green);
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: var(--text-gray);
+        }
+
+        .footer-bottom a {
+            color: var(--primary-blue);
+            text-decoration: none;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 1.5rem;
+            margin-top: 1rem;
+        }
+
+        .social-links a {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            background: var(--dark-bg);
+            color: var(--text-light);
+            border: 2px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .social-links a:hover {
+            background: var(--primary-blue);
+            border-color: var(--primary-blue);
+        }
+
+        .social-links a svg {
+            width: 24px;
+            height: 24px;
+            fill: currentColor;
+        }
+
+        @media (max-width: 968px) {
+            .nav-links {
+                display: none;
+            }
+            
+            .mobile-menu-toggle {
+                display: block;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            .page-container {
+                padding: 8rem 2rem 4rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <nav>
+            <a href="index.html" class="logo">
+                <img src="logo-full.jpg" alt="C4 Ground Control">
+            </a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="index.html#gallery">Gallery</a></li>
+                <li><a href="index.html#contact" class="cta-button">Get A Quote</a></li>
+            </ul>
+            <button class="mobile-menu-toggle" id="mobileMenuToggle">☰</button>
+        </nav>
+    </header>
+
+    <!-- Terms of Service Content -->
+    <div class="page-container">
+        <h1>Terms of <span>Service</span></h1>
+        <p class="last-updated"><strong>Last Updated:</strong> August 25, 2024</p>
+
+        <p>Welcome to C4 Ground Control. These Terms of Service ("Terms") govern your use of our website and services. By accessing or using our website or services, you agree to be bound by these Terms. If you do not agree to these Terms, please do not use our website or services.</p>
+
+        <h2>1. Services</h2>
+        <p>C4 Ground Control provides professional landscaping services including but not limited to irrigation systems, sod installation, drainage solutions, landscape lighting, mulching, hardscaping, and full landscape design. All services are subject to availability and our acceptance of your project.</p>
+
+        <h2>2. Quotes and Estimates</h2>
+        <p>All quotes and estimates provided are valid for 30 days from the date of issue unless otherwise specified. Quotes are based on the information provided and site conditions at the time of assessment. Final pricing may vary if actual conditions differ from those initially assessed.</p>
+        <ul>
+            <li>Quotes are not binding until a written contract is signed by both parties</li>
+            <li>We reserve the right to adjust pricing if project scope changes</li>
+            <li>Additional charges may apply for unforeseen site conditions or requested changes</li>
+        </ul>
+
+        <h2>3. Payment Terms</h2>
+        <p>Payment terms will be specified in your service agreement. Generally:</p>
+        <ul>
+            <li>A deposit may be required to secure scheduling and materials</li>
+            <li>Progress payments may be required for larger projects</li>
+            <li>Final payment is due upon project completion unless otherwise agreed</li>
+            <li>We accept cash, check, and major credit cards</li>
+            <li>Late payments may incur interest charges as permitted by law</li>
+        </ul>
+
+        <h2>4. Cancellation and Rescheduling</h2>
+        <p>We understand that circumstances change. Our cancellation policy is as follows:</p>
+        <ul>
+            <li>Cancellations made more than 48 hours before scheduled service may receive a full refund of deposits</li>
+            <li>Cancellations made within 48 hours may be subject to a cancellation fee</li>
+            <li>Deposits for custom-ordered materials are non-refundable</li>
+            <li>We reserve the right to reschedule due to weather or unforeseen circumstances</li>
+        </ul>
+
+        <h2>5. Property Access and Preparation</h2>
+        <p>By engaging our services, you agree to:</p>
+        <ul>
+            <li>Provide clear access to work areas</li>
+            <li>Mark or identify any underground utilities, sprinkler lines, or other infrastructure</li>
+            <li>Secure pets and notify us of any property hazards</li>
+            <li>Remove vehicles and obstacles from work areas</li>
+            <li>Ensure we have access to water and electricity if needed</li>
+        </ul>
+
+        <h2>6. Warranty and Guarantees</h2>
+        <p>We stand behind our work with the following warranties:</p>
+        <ul>
+            <li>Workmanship warranty: We guarantee our installation work for one year from completion</li>
+            <li>Plant material: 30-day warranty with proper care and watering</li>
+            <li>Sod: 30-day warranty with proper watering and care</li>
+            <li>Materials: Covered by manufacturer warranties where applicable</li>
+            <li>Warranties do not cover damage from neglect, improper maintenance, or acts of nature</li>
+        </ul>
+
+        <h2>7. Limitation of Liability</h2>
+        <p>To the fullest extent permitted by law:</p>
+        <ul>
+            <li>Our liability is limited to the amount paid for the specific service</li>
+            <li>We are not liable for damage to unmarked underground utilities or structures</li>
+            <li>We are not responsible for damage caused by unforeseen site conditions</li>
+            <li>We are not liable for indirect, incidental, or consequential damages</li>
+            <li>We maintain appropriate insurance coverage for our operations</li>
+        </ul>
+
+        <h2>8. Client Responsibilities</h2>
+        <p>After service completion, clients are responsible for:</p>
+        <ul>
+            <li>Following provided maintenance instructions</li>
+            <li>Proper watering of new plantings, sod, and irrigation systems</li>
+            <li>Protecting work from damage during the establishment period</li>
+            <li>Notifying us promptly of any concerns or issues</li>
+            <li>Routine maintenance to preserve warranty coverage</li>
+        </ul>
+
+        <h2>9. Weather and Force Majeure</h2>
+        <p>We may delay or reschedule work due to weather conditions, natural disasters, or other circumstances beyond our control. We are not liable for delays caused by such events and will reschedule at the earliest opportunity.</p>
+
+        <h2>10. Permits and Compliance</h2>
+        <p>Unless specifically agreed otherwise, clients are responsible for obtaining necessary permits. We will install work in compliance with applicable codes and regulations. We recommend clients verify local requirements before project commencement.</p>
+
+        <h2>11. Intellectual Property</h2>
+        <p>All landscape designs, plans, and drawings created by C4 Ground Control remain our intellectual property. These materials may not be reproduced or used for other purposes without our written consent.</p>
+
+        <h2>12. Photography and Marketing</h2>
+        <p>We may photograph completed projects for marketing purposes. If you prefer your property not be featured, please notify us in writing.</p>
+
+        <h2>13. Dispute Resolution</h2>
+        <p>In the event of any dispute, we encourage direct communication to resolve issues amicably. If disputes cannot be resolved directly, they will be governed by the laws of the State of Florida, and venue shall be in Orange County, Florida.</p>
+
+        <h2>14. Changes to Terms</h2>
+        <p>We reserve the right to modify these Terms at any time. Changes will be effective immediately upon posting to our website. Continued use of our services constitutes acceptance of modified Terms.</p>
+
+        <h2>15. Severability</h2>
+        <p>If any provision of these Terms is found to be unenforceable or invalid, that provision will be limited or eliminated to the minimum extent necessary, and the remaining provisions will remain in full force and effect.</p>
+
+        <h2>16. Contact Information</h2>
+        <p>For questions about these Terms or our services, please contact us:</p>
+        <ul>
+            <li><strong>Company:</strong> C4 Ground Control</li>
+            <li><strong>Phone:</strong> (407) 974-5864</li>
+            <li><strong>Email:</strong> info@c4groundcontrol.com</li>
+            <li><strong>Location:</strong> Orlando, FL</li>
+        </ul>
+
+        <p><strong>By using our services, you acknowledge that you have read, understood, and agree to be bound by these Terms of Service.</strong></p>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>C4 Ground Control</h3>
+                <p>Premier landscaping services in Orlando, FL</p>
+                <p>Transforming outdoor spaces since 2009</p>
+            </div>
+            <div class="footer-section">
+                <h3>Services</h3>
+                <a href="services.html">Irrigation Systems</a>
+                <a href="services.html">Sod Installation</a>
+                <a href="services.html">Drainage Solutions</a>
+                <a href="services.html">Landscape Lighting</a>
+            </div>
+            <div class="footer-section">
+                <h3>Contact</h3>
+                <p>Orlando, FL</p>
+                <p>Phone: (407) 974-5864</p>
+                <p>Email: info@c4groundcontrol.com</p>
+            </div>
+            <div class="footer-section">
+                <h3>Follow Us</h3>
+                <div class="social-links">
+                    <a href="https://instagram.com/c4groundcontrol" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                            <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                        </svg>
+                    </a>
+                    <a href="https://facebook.com/c4groundcontrol" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                            <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 C4 Ground Control. All rights reserved. | <a href="privacy.html">Privacy Policy</a> | <a href="terms.html">Terms of Service</a></p>
+        </div>
+    </footer>
+
+    <script>
+        const mobileMenuToggle = document.getElementById('mobileMenuToggle');
+        const navLinks = document.getElementById('navLinks');
+        
+        if (mobileMenuToggle) {
+            mobileMenuToggle.addEventListener('click', () => {
+                navLinks.classList.toggle('active');
+                mobileMenuToggle.textContent = navLinks.classList.contains('active') ? '✕' : '☰';
+            });
+        }
+    </script>
+</body>
+</html>

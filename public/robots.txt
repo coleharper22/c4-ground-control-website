@@ -1,0 +1,11 @@
+User-agent: *
+Allow: /
+
+# Sitemaps
+Sitemap: https://c4groundcontrol.com/sitemap.xml
+
+# Disallow admin/private areas (if any in future)
+# Disallow: /admin/
+
+# Crawl-delay (be nice to servers)
+Crawl-delay: 1

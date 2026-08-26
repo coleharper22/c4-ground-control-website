@@ -3,58 +3,260 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <!-- SEO Meta Tags -->
-    <meta name="description" content="C4 Ground Control Blog - Expert landscaping tips, Orlando lawn care advice, irrigation guides, and seasonal maintenance tips from Central Florida's premier landscaping professionals.">
-    <meta name="keywords" content="landscaping tips Orlando, lawn care blog, irrigation maintenance, Florida landscaping advice, landscape design ideas, Orlando gardening tips">
-    <meta name="robots" content="index, follow">
-    <link rel="canonical" href="https://c4groundcontrol.com/blog.html">
-    
-    <title>Landscaping Blog - Tips & Advice | C4 Ground Control</title>
+    <title>Blog - Landscaping Tips & Guides | C4 Ground Control</title>
+    <meta name="description" content="Expert landscaping tips, irrigation advice, and outdoor design guides for Orlando homeowners. Weekly updates from C4 Ground Control professionals.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="blog-style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+        
+        header {
+            background: linear-gradient(135deg, #0D5CB8 0%, #006B3F 100%);
+            color: white;
+            padding: 1rem 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        nav {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 700;
+        }
+        
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 2rem;
+        }
+        
+        nav a {
+            color: white;
+            text-decoration: none;
+            transition: opacity 0.3s;
+        }
+        
+        nav a:hover {
+            opacity: 0.8;
+        }
+        
+        .hero {
+            background: linear-gradient(135deg, #0D5CB8 0%, #006B3F 100%);
+            color: white;
+            padding: 8rem 2rem 4rem;
+            text-align: center;
+            margin-top: 60px;
+        }
+        
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+        
+        .hero p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+        
+        .blog-container {
+            max-width: 1200px;
+            margin: 4rem auto;
+            padding: 0 2rem;
+        }
+        
+        .blog-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        
+        .blog-card {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        
+        .blog-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+        }
+        
+        .blog-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+        
+        .blog-content {
+            padding: 1.5rem;
+        }
+        
+        .blog-date {
+            color: #006B3F;
+            font-size: 0.9rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .blog-title {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: #333;
+        }
+        
+        .blog-excerpt {
+            color: #666;
+            margin-bottom: 1rem;
+        }
+        
+        .read-more {
+            display: inline-block;
+            background: linear-gradient(135deg, #0D5CB8 0%, #006B3F 100%);
+            color: white;
+            padding: 0.8rem 1.5rem;
+            border-radius: 5px;
+            text-decoration: none;
+            transition: opacity 0.3s;
+        }
+        
+        .read-more:hover {
+            opacity: 0.9;
+        }
+        
+        footer {
+            background: #1a1a1a;
+            color: white;
+            padding: 3rem 2rem 1rem;
+            margin-top: 4rem;
+        }
+        
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+        
+        .footer-section h3 {
+            margin-bottom: 1rem;
+            color: #0D5CB8;
+        }
+        
+        .footer-bottom {
+            text-align: center;
+            margin-top: 2rem;
+            padding-top: 2rem;
+            border-top: 1px solid #333;
+        }
+    </style>
 </head>
 <body>
     <header>
-        <div class="container">
-            <nav>
-                <a href="index.html" class="logo">
-                    <img src="logo-full.jpg" alt="C4 Ground Control">
-                </a>
-                <ul class="nav-links">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="services.html">Services</a></li>
-                    <li><a href="gallery.html">Gallery</a></li>
-                    <li><a href="blog.html">Blog</a></li>
-                    <li><a href="careers.html">Careers</a></li>
-                    <li><a href="index.html#contact" class="cta-button">Contact Us</a></li>
-                </ul>
-            </nav>
-        </div>
+        <nav>
+            <div class="logo">C4 Ground Control</div>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/#services">Services</a></li>
+                <li><a href="/gallery.html">Gallery</a></li>
+                <li><a href="/blog.html">Blog</a></li>
+                <li><a href="/#contact">Contact</a></li>
+            </ul>
+        </nav>
     </header>
 
     <section class="hero">
-        <div class="container">
-            <h1>Landscaping Tips & Insights</h1>
-            <p>Expert advice from Central Florida's premier landscaping professionals</p>
-        </div>
+        <h1>Landscaping Blog</h1>
+        <p>Expert tips, guides, and inspiration for your Orlando outdoor space</p>
     </section>
 
-    <section class="blog-container">
-        <div class="container">
-            <div class="blog-grid">
-                <!-- Blog posts will be added here -->
-                <p style="text-align: center; padding: 3rem; color: #666;">Blog posts coming soon! Check back for expert landscaping tips and advice.</p>
-            </div>
+    <div class="blog-container">
+        <div id="blog-grid" class="blog-grid">
+            <!-- Blog posts will be loaded here -->
         </div>
-    </section>
+    </div>
 
     <footer>
-        <div class="container">
-            <p>&copy; 2024 C4 Ground Control. All rights reserved.</p>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>C4 Ground Control</h3>
+                <p>Professional landscaping, irrigation, and outdoor maintenance in Orlando, FL.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <p><a href="/" style="color: white;">Home</a></p>
+                <p><a href="/#services" style="color: white;">Services</a></p>
+                <p><a href="/gallery.html" style="color: white;">Gallery</a></p>
+                <p><a href="/blog.html" style="color: white;">Blog</a></p>
+            </div>
+            <div class="footer-section">
+                <h3>Contact</h3>
+                <p>📞 (407) 405-0955</p>
+                <p>📧 cole@c4groundcontrol.com</p>
+                <p>📍 Orlando, FL</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 C4 Ground Control. All rights reserved.</p>
         </div>
     </footer>
+
+    <script>
+        // Auto-load blog posts from /blog/ directory
+        async function loadBlogPosts() {
+            const blogGrid = document.getElementById('blog-grid');
+            
+            // This will be populated by the blog generator script
+            // For now, fetch and parse the blog directory
+            try {
+                const response = await fetch('/blog/posts.json');
+                const posts = await response.json();
+                
+                posts.forEach(post => {
+                    const card = document.createElement('div');
+                    card.className = 'blog-card';
+                    card.innerHTML = `
+                        ${post.image ? `<img src="${post.image}" alt="${post.title}">` : ''}
+                        <div class="blog-content">
+                            <div class="blog-date">${new Date(post.date).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}</div>
+                            <h2 class="blog-title">${post.title}</h2>
+                            <p class="blog-excerpt">${post.excerpt}</p>
+                            <a href="/blog/${post.filename}" class="read-more">Read More</a>
+                        </div>
+                    `;
+                    blogGrid.appendChild(card);
+                });
+            } catch (error) {
+                // Fallback: show placeholder message
+                blogGrid.innerHTML = '<p style="text-align: center; grid-column: 1/-1;">New blog posts coming soon! Check back Monday for our first post.</p>';
+            }
+        }
+        
+        loadBlogPosts();
+    </script>
 </body>
 </html>

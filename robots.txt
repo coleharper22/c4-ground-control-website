@@ -1,0 +1,9 @@
+# C4 Ground Control - robots.txt
+User-agent: *
+Allow: /
+
+# Block social media assets directory (unlisted)
+Disallow: /sm-assets-c4-2026/
+
+# Sitemap
+Sitemap: https://c4groundcontrol.com/sitemap.xml
